@@ -1,6 +1,6 @@
 package com.demo.dao;
 
-import com.demo.vo.Teacher;
+import com.demo.vo.entity.Teacher;
 
 public interface TeacherMapper {
     int deleteByPrimaryKey(String id);

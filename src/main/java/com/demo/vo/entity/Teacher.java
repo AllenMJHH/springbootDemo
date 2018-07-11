@@ -1,4 +1,4 @@
-package com.demo.vo;
+package com.demo.vo.entity;
 
 import java.util.Date;
 

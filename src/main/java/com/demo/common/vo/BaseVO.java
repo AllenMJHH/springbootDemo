@@ -8,10 +8,19 @@ import java.io.Serializable;
  */
 public class BaseVO implements Serializable {
     private static final long serialVersionUID = -3612697687584505965L;
+    private String id;
     private String createBy;
     private String createDate;
     private String lastUpdateBy;
     private String lastUpdateDate;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getCreateBy() {
         return createBy;
