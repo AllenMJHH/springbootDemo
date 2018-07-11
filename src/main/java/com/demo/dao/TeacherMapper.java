@@ -3,6 +3,11 @@ package com.demo.dao;
 import com.demo.vo.entity.Teacher;
 
 public interface TeacherMapper {
+    /**
+     * 删除
+     * @param id
+     * @return
+     */
     int deleteByPrimaryKey(String id);
 
     int insert(Teacher record);
