@@ -10,6 +10,11 @@ public interface TeacherMapper {
      */
     int deleteByPrimaryKey(String id);
 
+    /**
+     * 新增
+     * @param record
+     * @return
+     */
     int insert(Teacher record);
 
     int insertSelective(Teacher record);
