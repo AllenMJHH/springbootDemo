@@ -1,20 +1,12 @@
-package com.demo.dao;
+package com.demo.dao.teacher;
 
+import com.demo.vo.TeacherVO;
 import com.demo.vo.entity.Teacher;
+import org.apache.ibatis.annotations.Select;
 
 public interface TeacherMapper {
-    /**
-     * 删除
-     * @param id
-     * @return
-     */
     int deleteByPrimaryKey(String id);
 
-    /**
-     * 新增
-     * @param record
-     * @return
-     */
     int insert(Teacher record);
 
     int insertSelective(Teacher record);
@@ -24,4 +16,6 @@ public interface TeacherMapper {
     int updateByPrimaryKeySelective(Teacher record);
 
     int updateByPrimaryKey(Teacher record);
+
+    TeacherVO getTeacher(TeacherVO teacherVO);
 }

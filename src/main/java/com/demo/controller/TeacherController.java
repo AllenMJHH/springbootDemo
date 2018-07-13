@@ -1,5 +1,9 @@
 package com.demo.controller;
 
+import com.demo.dao.teacher.TeacherMapper;
+import com.demo.service.ITeacherService;
+import com.demo.vo.TeacherVO;
+import com.demo.vo.entity.Teacher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,15 +26,14 @@ public class TeacherController {
     //日志
     private final Logger logger = LoggerFactory.getLogger(TeacherController.class);
 
-    /*@RequestMapping(value = "/findTeacher",method = RequestMethod.GET)
-    public List<TeacherVO> findTeacher(TeacherVO teacherVO) {
-        logger.info("TeacherController findTeacher,param:" + teacherVO);
-        return teacherService.findTeacher(teacherVO);
-    }*/
-    @RequestMapping(value = "/test",method = RequestMethod.GET)
-    public void test() {
-        String id = "123";
-        String name = "tom";
-        teacherMapper.insert(id, name);
+    @RequestMapping(value = "/getTeacher",method = RequestMethod.GET)
+    public TeacherVO getTeacher(TeacherVO teacherVO) {
+        return  teacherService.getTeacher(teacherVO);
     }
+    @RequestMapping(value = "/test",method = RequestMethod.GET)
+    public Teacher test(String id) {
+        id="123";
+        return teacherService.selectByPrimaryKey(id);
+    }
+
 }
