@@ -4,6 +4,7 @@ import com.demo.dao.teacher.TeacherMapper;
 import com.demo.service.ITeacherService;
 import com.demo.vo.TeacherVO;
 import com.demo.vo.entity.Teacher;
+import org.jasypt.encryption.StringEncryptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,8 @@ public class TeacherController {
     private ITeacherService teacherService;
     @Autowired
     private TeacherMapper teacherMapper;
+    @Autowired
+    private StringEncryptor stringEncryptor;
 
     //日志
     private final Logger logger = LoggerFactory.getLogger(TeacherController.class);
@@ -34,6 +37,10 @@ public class TeacherController {
     public Teacher test(String id) {
         id="123";
         return teacherService.selectByPrimaryKey(id);
+    }
+    @RequestMapping(value = "/data")
+    public void dataTest() {
+        System.out.println(stringEncryptor.encrypt("java"));
     }
 
 }
