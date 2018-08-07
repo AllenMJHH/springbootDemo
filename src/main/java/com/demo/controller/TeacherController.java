@@ -36,6 +36,7 @@ public class TeacherController {
     @RequestMapping(value = "/test",method = RequestMethod.GET)
     public Teacher test(String id) {
         id="123";
+
         return teacherService.selectByPrimaryKey(id);
     }
     @RequestMapping(value = "/data")

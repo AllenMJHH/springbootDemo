@@ -24,6 +24,11 @@ spring:
       #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: true
+    pool:
+      enabled: false
 
 mybatis:
   mapper-locations: classpath:dao/teacher/*Mapper.xml
@@ -37,6 +42,7 @@ pagehelper:
 jasypt:
   encryptor:
     password: asdfg
+
 
 
 
