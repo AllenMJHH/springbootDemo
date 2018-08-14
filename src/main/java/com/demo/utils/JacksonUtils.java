@@ -23,6 +23,15 @@ public class JacksonUtils {
 
     }
 
+    static {
+        //序列化
+
+
+        //反序列化
+        // 在遇到未知属性的时候不抛出异常
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,false);
+    }
+
     private static ObjectMapper getInstance() {
         return objectMapper;
     }
