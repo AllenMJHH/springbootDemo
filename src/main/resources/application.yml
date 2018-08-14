@@ -29,6 +29,14 @@ spring:
     in-memory: true
     pool:
       enabled: false
+  application:
+    name: demo
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
 
 mybatis:
   mapper-locations: classpath:dao/teacher/*Mapper.xml

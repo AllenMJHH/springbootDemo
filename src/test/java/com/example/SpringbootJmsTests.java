@@ -1,7 +1,7 @@
 package com.example;
 
 import com.demo.DemoApplication;
-import com.demo.mq.MsgProducer;
+import com.demo.activemq.MsgProducer;
 import org.apache.activemq.command.ActiveMQQueue;
 import org.junit.Test;
 import org.junit.runner.RunWith;

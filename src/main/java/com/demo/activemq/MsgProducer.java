@@ -1,4 +1,4 @@
-package com.demo.mq;
+package com.demo.activemq;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsMessagingTemplate;
